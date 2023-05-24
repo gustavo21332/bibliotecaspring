@@ -10,7 +10,7 @@ import application.model.LivroRepository;
 @Controller
 @RequestMapping("/livro")
 public class LivroController {
-    
+
     @Autowired
     private LivroRepository livroRepo;
 
@@ -18,5 +18,10 @@ public class LivroController {
     public String list(Model model) {
         model.addAttribute("livros", livroRepo.findAll());
         return "/WEB-INF/livro/list.jsp";
+    }
+
+    @RequestMapping("/insert")
+    public String insert() {
+        return "/WEB-INF/livro/insert.jsp";
     }
 }

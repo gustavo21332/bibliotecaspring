@@ -11,23 +11,18 @@ import jakarta.persistence.Table;
 public class Livro {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-
     private int id;
+    private String titulo;
 
     public int getId() {
         return id;
     }
-
     public void setId(int id) {
         this.id = id;
     }
-
-    private String titulo;
-
     public String getTitulo() {
         return titulo;
     }
-
     public void setTitulo(String titulo) {
         this.titulo = titulo;
     }
